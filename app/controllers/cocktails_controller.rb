@@ -1,11 +1,11 @@
 class CocktailsController < ApplicationController
-     # GET /birds
+     # GET /cocktails
     def index
         cocktails = Cocktail.all 
         render json: cocktails
     end
 
-  # GET /birds/:id
+  # GET /cocktails/:id
     def show
         cocktail = Cocktail.find_by(id: params[:id])
         if cocktail
@@ -16,14 +16,18 @@ class CocktailsController < ApplicationController
       end
     
 
-# POST /birds
+# POST /cocktail
     def create
-        cocktail = Cocktail.create(name: params[:name], category: params[:category])
-        render json: cocktail, status: :created
+        cocktail = Cocktail.create(cocktail_params)
+        if cocktail.valid?
+          render json: cocktail, status: :created
+        else
+          render json: { errors: cocktail.errors }, status: :unprocessable_entity
     end
+  end
 
 
-     # PATCH /birds/:id
+     # PATCH /cocktail/:id
     def update
         cocktail = Cocktail.find_by(id: params[:id])
         if cocktail
@@ -34,9 +38,9 @@ class CocktailsController < ApplicationController
         end
       end
 
-# DELETE /birds/:id  
+# DELETE /cocktails/:id  
 def destroy
-    bird = Bird.find_by(id: params[:id])
+    cocktail = Cocktail.find_by(id: params[:id])
     if cocktail
       cocktail.destroy
       head :no_content
@@ -44,5 +48,12 @@ def destroy
       render json: { error: "cocktail not found" }, status: :not_found
     end
   end
+
+  private
+
+  def cocktail_params
+    params.permit(:name, :category, :image, :price)
+  end
+  
 
 end
