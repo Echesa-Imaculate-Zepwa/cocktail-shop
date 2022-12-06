@@ -1,29 +1,26 @@
 // client/src/components/App.js
 import { useState, useEffect } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import SearchBar from '/components/SearchBar';
+import Cocktail from "./components/Cocktail";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [cocktails, setCocktails] = useState([]);
+
 
   useEffect(() => {
-    fetch("/hello")
-      .then((r) => r.json())
-      .then((data) => setCount(data.count));
-  }, []);
+    fetch("http:/localhost:3000/cocktails")
+    .then((response) => response.json())
+    .then((data) => setCocktails(data));
+  },[])
+ 
+
+
 
   return (
-    <BrowserRouter>
-      <div className="App">
-        <Switch>
-          <Route path="/testing">
-            <h1>Test Route</h1>
-          </Route>
-          <Route path="/">
-            <h1>Page Count: {count}</h1>
-          </Route>
-        </Switch>
-      </div>
-    </BrowserRouter>
+    <>
+     <SearchBar cocktails={cocktails} setCocktails={setCocktails} />
+     <Cocktails cocktails={cocktails}/>
+    </>
   );
 }
 
