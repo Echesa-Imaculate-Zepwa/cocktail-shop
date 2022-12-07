@@ -79,10 +79,17 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
+ #  production:
+#     url: <%= ENV['DATABASE_URL'] %>
+
+production:
+  <<: *default
+  database: mysite_production
+  username: mysite
+  password: <%= ENV['MYSITE_DATABASE_PASSWORD'] %>
+
+
 
 production:
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
-
-
-
