@@ -7,7 +7,7 @@ const Cocktail = (cocktails) => {
     return (
          <div className="card-container">
             <h1>OUR DRINKS</h1>
-        {cocktails.map(cocktail => (
+        {cocktails.map(cocktail => {
           <div className="card">
               <img src={cocktail.image_link} alt="our-drinks" className="card-image" /> 
               <h1>{cocktail.name}</h1>
@@ -17,7 +17,7 @@ const Cocktail = (cocktails) => {
               {/* <p><button>Add to Cart</button></p> */}
           </div>
            
-        ) )}
+    })}
         </div>
     );
 }

@@ -1,13 +1,13 @@
 
 import React, { useEffect, useState } from "react";
 
-function SearchBar({cocktails, setCocktails}) {
+function searchBar({cocktails, setCocktails}) {
   const [ searchValue, setSearchValue ] = useState("")
 //   console.log(products[0])
 
 
     useEffect(() => {
-      const filteredCocktails = cocktails.filter(product => {
+      const filteredCocktails = cocktails.filter(cocktail => {
         const lowercockDescription = cocktail.name.toLowerCase()
         return lowerCockDescription.includes(searchValue.toLowerCase())
         })

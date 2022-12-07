@@ -1,10 +1,11 @@
 // client/src/components/App.js
 import { useState, useEffect } from "react";
-import SearchBar from './components/SearchBar';
+// import SearchBar from './components/SearchBar';
 import Cocktail from "./components/Cocktail";
 
 function App() {
   const [cocktails, setCocktails] = useState([]);
+
 
 
   useEffect(() => {
@@ -12,13 +13,24 @@ function App() {
     .then((response) => response.json())
     .then((data) => setCocktails(data));
   },[])
- 
+  console.log(cocktails[0])
+
+  // const fetchData = () => {
+    // return fetch("http:/localhost:3000/cocktails")
+          // .then((response) => response.json())
+          // .then((data) => setCocktail(data));
+  // }
+
+  // useEffect(() => {
+    // fetchData();
+  // },[])
+//  
 
 
 
   return (
     <>
-     <SearchBar cocktails={cocktails} setCocktails={setCocktails} />
+     {/* <SearchBar cocktails={cocktails} setCocktails={setCocktails} /> */}
      <Cocktail cocktails={cocktails}/>
     </>
   );
