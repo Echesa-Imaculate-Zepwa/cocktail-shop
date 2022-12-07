@@ -1,6 +1,6 @@
 // client/src/components/App.js
 import { useState, useEffect } from "react";
-import SearchBar from '/components/SearchBar';
+import SearchBar from './components/SearchBar';
 import Cocktail from "./components/Cocktail";
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
   return (
     <>
      <SearchBar cocktails={cocktails} setCocktails={setCocktails} />
-     <Cocktails cocktails={cocktails}/>
+     <Cocktail cocktails={cocktails}/>
     </>
   );
 }
