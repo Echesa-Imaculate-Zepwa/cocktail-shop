@@ -1,6 +1,7 @@
 import React from "react";
 
-function Cocktail (props){
+
+const Cocktail = () => {
     // console.log(products[0].price)
 
     return (
