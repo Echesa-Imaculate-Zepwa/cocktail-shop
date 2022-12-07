@@ -1,14 +1,14 @@
 import React from "react";
 
-function Cocktail (){
+function Cocktail (props){
     // console.log(products[0].price)
 
     return (
          <div className="card-container">
             <h1>OUR DRINKS</h1>
-        {products.map(product => (
+        {cocktails.map(cocktail => (
           <div className="card">
-              <img src={cocktail.image_link} alt="our-cosmetic" className="card-image" /> 
+              <img src={cocktail.image_link} alt="our-drinks" className="card-image" /> 
               <h1>{cocktail.name}</h1>
               <p className="price">Price: {cocktail.price}</p>
               <p className="category">Category: {cocktail.category}</p>
