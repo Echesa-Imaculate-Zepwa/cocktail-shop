@@ -1,4 +1,4 @@
-       Ruby E-Commerce ( cocktail-shop )
+       RUBY E-COMMERCE ( cocktail-shop )
 
 >>The project is a cocktail-shop  Rails backend.
 >>The project requrements were as follows:-
@@ -59,6 +59,7 @@
  From the Postgres CLI, run this command (replacing "name" with your username):  
         $createuser -sr name
         >Then enter control + d or type logout to exit.  
+        
 
 USING THE PROJECT
 

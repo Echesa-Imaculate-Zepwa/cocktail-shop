@@ -2,6 +2,7 @@ import React from "react";
 
 
 const Cocktail = ({cocktails}) => {
+    console.log(cocktails[0].name)
 
     return (
          <div className="card-container">
