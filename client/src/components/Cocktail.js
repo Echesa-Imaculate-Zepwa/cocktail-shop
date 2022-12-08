@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const Cocktail = (cocktails) => {
+const Cocktail = ({cocktails}) => {
     // console.log(products[0].price)
 
     return (
