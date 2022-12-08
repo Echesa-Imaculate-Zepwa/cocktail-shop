@@ -2,7 +2,6 @@ import React from "react";
 
 
 const Cocktail = ({cocktails}) => {
-    // console.log(products[0].price)
 
     return (
          <div className="card-container">
@@ -14,7 +13,6 @@ const Cocktail = ({cocktails}) => {
               <p className="price">Price: {cocktail.price}</p>
               <p className="category">Category: {cocktail.category}</p>
               <p className="image">{cocktail.image}</p>
-              {/* <p><button>Add to Cart</button></p> */}
           </div>
            
     })}

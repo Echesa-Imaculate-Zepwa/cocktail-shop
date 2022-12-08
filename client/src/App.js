@@ -10,22 +10,22 @@ function App() {
 
 
   useEffect(() => {
-    fetch("http:/localhost:3000/cocktails")
+    fetch("/cocktails")
     .then((response) => response.json())
     .then((data) => setCocktails(data));
   },[])
-  console.log(cocktails[0])
+  console.log(cocktails)
 
   // const fetchData = () => {
     // return fetch("http:/localhost:3000/cocktails")
           // .then((response) => response.json())
-          // .then((data) => setCocktail(data));
+          // .then((data) => setCocktails(data));
   // }
 
   // useEffect(() => {
     // fetchData();
   // },[])
-//  
+ 
 
 
 
