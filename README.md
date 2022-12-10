@@ -1,4 +1,6 @@
-       RUBY E-COMMERCE ( cocktail-shop )
+        E-COMMERCE APPLICATION ( cocktail-shop )
+       
+   >>>>>>>    Ruby on rails backend.
 
 >>The project is a cocktail-shop  Rails backend.
 >>The project requrements were as follows:-
@@ -70,10 +72,27 @@ Simply run
    http://localhost:3000/cocktails - to get the whole cocktails data
    http://localhost:3000/cocktails/1 - to get the cocktail with an id of 1
 
-
-
- RESOURCES
+Resources:
 
  For more resouces you can visit the link below:
  https://rubyonrails.org
 
+>>>>>>>> React frontend (client)
+
+The react project is to diplay the data from the backend  by fetching.
+For this to occur ensure the rails server is running for it to display data to the frontend part.
+   
+   Run this commands on separate terminal:-
+        
+    > rails s: run the backend on http://localhost:3000
+    > npm start --prefix client: run the frontend on http://localhost:4000
+
+
+DEPLOYMENT
+
+I created a new repository on the client(frontend) folder for deployment;
+
+ This is the deployed url of the repository:-
+         https://github.com/Echesa-Imaculate-Zepwa/client
+
+         The rails server must be running in order to see the fetched data on the screen.
