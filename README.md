@@ -88,7 +88,7 @@ For this to occur ensure the rails server is running for it to display data to t
     > npm start --prefix client: run the frontend on http://localhost:4000
 
 
-DEPLOYMENT
+DEPLOYMENT FRONTEND
 
 I created a new repository on the client(frontend) folder for deployment;
 
@@ -96,3 +96,13 @@ I created a new repository on the client(frontend) folder for deployment;
          https://github.com/Echesa-Imaculate-Zepwa/client
 
          The rails server must be running in order to see the fetched data on the screen.
+          >> rails s
+
+
+
+ DEPLOYMENT BACKEND
+
+ This is my deployed backend url
+
+ https://cocktail-shop-production.up.railway.app/cocktails
+
